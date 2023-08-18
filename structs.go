@@ -13,8 +13,7 @@ type Employee struct {
 	role string
 }
 
-/**
-func main() {
+func structsExample() {
 	bob := Person{
 		name: "Bob",
 		age:  20,
@@ -27,7 +26,6 @@ func main() {
 	bob.info()
 	fmt.Println(bob.isAdult())
 }
-**/
 
 func (p Person) isAdult() bool { return p.age >= 18 }
 

@@ -1,11 +1,16 @@
 package main
 
-/**
-func main() {
+import (
+	"fmt"
+)
+
+func mapsExample() {
 	// ages := map[string]int{
 	// 	"john":  19,
 	// 	"james": 23,
 	// }
+
+	errorExample()
 
 	ages := make(map[string]int)
 	ages["john"] = 87
@@ -27,4 +32,3 @@ func main() {
 	s, ok := ages["smith"]
 	fmt.Println(s, ok)
 }
-**/

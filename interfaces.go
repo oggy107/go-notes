@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Shape interface {
 	area() float64
 	parameter() float64
@@ -18,8 +20,7 @@ func (r Rect) parameter() float64 {
 	return 2 * (r.length + r.height)
 }
 
-/**
-func main() {
+func interfaceExample() {
 	var rect Shape
 	rect = Rect{
 		length: 6.3,
@@ -31,6 +32,7 @@ func main() {
 
 	// type switch can be used when there are multiple successive type assertions
 	//  e here is instance of interface and v represnets underlying type
+	/**
 	switch v := e.(type) {
 	case email:
 		return v.toAddress, v.cost()
@@ -39,7 +41,7 @@ func main() {
 	default:
 		return "", v.cost()
 	}
+	**/
 
 	fmt.Print(r, ok)
 }
-**/

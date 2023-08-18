@@ -5,8 +5,7 @@ import (
 	"fmt"
 )
 
-/**
-func main() {
+func errorExample() {
 	fmt.Println(div(10, 2))
 	fmt.Println(div(10, 0))
 	fmt.Println(div(20, 5))
@@ -19,7 +18,6 @@ func main() {
 	fmt.Println(errors.Is(err, divByZero))
 	fmt.Println(errors.Is(err, DivError{}))
 }
-**/
 
 type DivByZero struct{}
 
