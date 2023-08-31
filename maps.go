@@ -10,8 +10,6 @@ func mapsExample() {
 	// 	"james": 23,
 	// }
 
-	errorExample()
-
 	ages := make(map[string]int)
 	ages["john"] = 87
 	ages["smith"] = 69
