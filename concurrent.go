@@ -43,4 +43,25 @@ func greetConcurrentlyChannel(name string, ch chan string) {
 
 	// passing data into channel
 	ch <- "done"
+	// we can also close the channel (if sending multiple values to channel and recieving values in for loop to indicate that the the goroutine is done sending more values to the channel)
+	// close(ch)
+	// we need to check if channel is closed or not where we are recieving data from channel
+	// data, ok := <-ch
 }
+
+// BUFFERED CHANNELS
+// normal channels work like if there is sender there must be a reciever. channels themselves cannot store any
+// data into them. This is where buffer channels comes in. They can store data inside them
+
+// ch := make(chan int, 10)
+
+// SELECT (SWTICH STATEMENT FOR CHANNELS)
+// Sometimes we have a single goroutine listening to multiple channels and want to process data in the order it comes through each channel.
+// A select statement is used to listen to multiple channels at the same time. It is similar to a switch statement but for channels.
+
+// select {
+// case i, ok := <- chInts:
+//   fmt.Println(i)
+// case s, ok := <- chStrings:
+//   fmt.Println(s)
+// }
