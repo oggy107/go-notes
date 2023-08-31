@@ -65,3 +65,24 @@ func greetConcurrentlyChannel(name string, ch chan string) {
 // case s, ok := <- chStrings:
 //   fmt.Println(s)
 // }
+
+// select statement can also have a default case which is executes immediately when no other channel has value to read. A default case stops the select statement from blocking.
+
+// MARKING CHANNELS AS READ ONLY OR WRITE ONLY
+
+// following marks channel as read only
+// func main(){
+// 	ch := make(chan int)
+// 	readCh(ch)
+//   }
+
+//   func readCh(ch <-chan int) {
+// 	// ch can only be read from
+// 	// in this function
+//   }
+
+// following marks channel as write only
+// func writeCh(ch chan<- int) {
+// 	// ch can only be written to
+// 	// in this function
+//   }
