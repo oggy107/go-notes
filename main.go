@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
 	// errorExample()
 	// interfaceExample()
@@ -23,15 +19,17 @@ func main() {
 	// wg.Wait()
 
 	// using channel to wait for goroutines to finish
-	ch := make(chan string)
+	// ch := make(chan string)
 
-	go greetConcurrentlyChannel("jack", ch)
+	// go greetConcurrentlyChannel("jack", ch)
 
-	fmt.Println("program doing some more other stuff....")
+	// fmt.Println("program doing some more other stuff....")
 	// recieving data from channel (this will wait (block) until data is recieved)
-	data := <-ch
+	// data := <-ch
 
-	fmt.Println("data from channel:", data)
+	// fmt.Println("data from channel:", data)
 
 	///////////////////////////////////////////////
+
+	genericsExample()
 }
